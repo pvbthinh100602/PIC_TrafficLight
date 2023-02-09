@@ -1,5 +1,5 @@
-build/default/production/global/global.o:  \
-	D:/MPLABProjects/TrafficLight.X/global/global.c  \
+build/default/production/timer/timer.o:  \
+	D:/MPLABProjects/TrafficLight.X/timer/timer.c  \
 	D:/MPLABProjects/TrafficLight.X/display/display.h  \
 	D:/MPLABProjects/TrafficLight.X/timer/timer.h  \
 	D:/MPLABProjects/TrafficLight.X/global/global.h  \

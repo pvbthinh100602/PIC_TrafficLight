@@ -8,7 +8,11 @@
 #ifndef GLOBAL_H
 #define	GLOBAL_H
 
-#include "../main.h"
+#include <p18f4620.h>
+
+#include "display/display.h"
+#include "timer/timer.h"
+#include "interrupt/interrupt.h"
 
 #endif	/* GLOBAL_H */
 

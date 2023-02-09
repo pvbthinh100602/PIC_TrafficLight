@@ -8,7 +8,12 @@
 #ifndef INTERRUPT_H
 #define	INTERRUPT_H
 
-void interrupt_init();
+#include "global/global.h"
+
+void init_interrupt(void);
+void init_ext_int0(void);
+void low_isr(void);
+void high_isr(void);
 
 #endif	/* INTERRUPT_H */
 
