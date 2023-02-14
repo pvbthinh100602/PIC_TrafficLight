@@ -8,7 +8,19 @@
 #ifndef BUTTON_H
 #define	BUTTON_H
 
-void button_init();
+#include "global/global.h"
+
+#define PORT_BUTTON		PORTC
+#define TRIS_BUTTON		TRISC
+#define	MAX_COL			4
+#define MAX_ROW			4
+
+extern unsigned int key_code[];
+
+unsigned char is_button_press(unsigned char index);
+void init_key_matrix();
+void scan_key_matrix();
+//void button_process();
 
 #endif	/* BUTTON_H */
 

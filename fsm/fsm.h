@@ -8,16 +8,11 @@
 #ifndef FSM_H
 #define	FSM_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+#include "global/global.h"
 
-
-
-
-#ifdef	__cplusplus
-}
-#endif
+void fsm_auto();
+void fsm_manual();
+void fsm_setting();
 
 #endif	/* FSM_H */
 

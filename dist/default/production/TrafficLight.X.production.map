@@ -1,5 +1,5 @@
 MPLINK 4.48, Linker
-Linker Map File - Created Fri Feb 10 00:09:07 2023
+Linker Map File - Created Tue Feb 14 23:57:07 2023
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -7,38 +7,54 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                _entry_scn       code   0x000000    program   0x000006
            .code___init.o       code   0x000006    program   0x000002
       InterruptVectorHigh       code   0x000008    program   0x000006
-     .idata_interrupt.o_i    romdata   0x00000e    program   0x000000
-     .romdata_interrupt.o    romdata   0x00000e    program   0x000000
-         .romdata_timer.o    romdata   0x00000e    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x00000e    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x00000e    program   0x000000
-      .idata_fxd2424u.o_i    romdata   0x00000e    program   0x000000
-      .romdata_fxd2424u.o    romdata   0x00000e    program   0x000000
-          .romdata_main.o    romdata   0x00000e    program   0x000000
-          .idata_main.o_i    romdata   0x00000e    program   0x000000
-        .romdata___init.o    romdata   0x00000e    program   0x000000
-       .romdata_display.o    romdata   0x00000e    program   0x000000
-       .idata_display.o_i    romdata   0x00000e    program   0x000008
-        .romdata_global.o    romdata   0x00000e    program   0x000000
-        .idata_global.o_i    romdata   0x00000e    program   0x000000
-         .romdata_c018i.o    romdata   0x00000e    program   0x000000
-        .idata___init.o_i    romdata   0x000016    program   0x000000
-           .code_global.o       code   0x000016    program   0x000000
-            .code_c018i.o       code   0x000016    program   0x000000
-         .idata_c018i.o_i    romdata   0x000016    program   0x000000
+             .stringtable    romdata   0x00000e    program   0x000009
+     .idata_interrupt.o_i    romdata   0x000017    program   0x000000
+     .romdata_interrupt.o    romdata   0x000017    program   0x000000
+         .romdata_timer.o    romdata   0x000017    program   0x000000
+        .romdata_button.o    romdata   0x000017    program   0x000000
+           .romdata_lcd.o    romdata   0x000017    program   0x000000
+           .idata_fsm.o_i    romdata   0x000017    program   0x000000
+           .romdata_fsm.o    romdata   0x000017    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x000017    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x000017    program   0x000000
+      .idata_fxd2424u.o_i    romdata   0x000017    program   0x000000
+      .romdata_fxd2424u.o    romdata   0x000017    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x000017    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x000017    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x000017    program   0x000000
+       .romdata_fxm3232.o    romdata   0x000017    program   0x000000
+        .idata___init.o_i    romdata   0x000017    program   0x000000
+        .romdata___init.o    romdata   0x000017    program   0x000000
+         .idata_c018i.o_i    romdata   0x000017    program   0x000000
+         .romdata_c018i.o    romdata   0x000017    program   0x000000
+        .romdata_global.o    romdata   0x000017    program   0x000000
+       .romdata_display.o    romdata   0x000017    program   0x000000
+          .idata_main.o_i    romdata   0x000017    program   0x000000
+          .romdata_main.o    romdata   0x000017    program   0x000000
+            .code_c018i.o       code   0x000018    program   0x000000
+           .code_global.o       code   0x000018    program   0x000000
        InterruptVectorLow       code   0x000018    program   0x000006
-                   .cinit    romdata   0x00001e    program   0x00001a
-            .code_timer.o       code   0x000038    program   0x000520
-        .code_interrupt.o       code   0x000558    program   0x0001c4
-             .code_main.o       code   0x00071c    program   0x0000f4
-          .code_display.o       code   0x000810    program   0x0000d0
-                     PROG       code   0x0008e0    program   0x0000a6
-               _cinit_scn       code   0x000986    program   0x00009e
-         .code_fxd2424u.o       code   0x000a24    program   0x00003a
-         .code_fxd1616u.o       code   0x000a5e    program   0x00002c
-                    .code       code   0x000a8a    program   0x000020
-             _startup_scn       code   0x000aaa    program   0x00001c
-         .idata_timer.o_i    romdata   0x000ac6    program   0x000018
+                   .cinit    romdata   0x00001e    program   0x00003e
+              .code_lcd.o       code   0x00005c    program   0x000e20
+            .code_timer.o       code   0x000e7c    program   0x000520
+           .code_button.o       code   0x00139c    program   0x000494
+              .code_fsm.o       code   0x001830    program   0x000314
+          .code_display.o       code   0x001b44    program   0x0001da
+        .code_interrupt.o       code   0x001d1e    program   0x0001c8
+             .code_main.o       code   0x001ee6    program   0x0000ee
+                     PROG       code   0x001fd4    program   0x0000a6
+               _cinit_scn       code   0x00207a    program   0x00009e
+          .code_fxm3232.o       code   0x002118    program   0x000070
+         .code_fxd3232u.o       code   0x002188    program   0x000048
+         .code_fxd2424u.o       code   0x0021d0    program   0x00003a
+         .code_fxd1616u.o       code   0x00220a    program   0x00002c
+                    .code       code   0x002236    program   0x000020
+             _startup_scn       code   0x002256    program   0x00001c
+         .idata_timer.o_i    romdata   0x002272    program   0x000018
+           .idata_lcd.o_i    romdata   0x00228a    program   0x000061
+        .idata_global.o_i    romdata   0x0022eb    program   0x000009
+       .idata_display.o_i    romdata   0x0022f4    program   0x000008
+        .idata_button.o_i    romdata   0x0022fc    program   0x000048
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
@@ -51,26 +67,36 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
     .config_30000c_main.o    romdata   0x30000c    program   0x000001
     .config_30000d_main.o    romdata   0x30000d    program   0x000001
                 MATH_DATA      udata   0x000000       data   0x000010
-                 .tmpdata      udata   0x000010       data   0x000009
-           .idata_timer.o      idata   0x000080       data   0x000018
-           .udata_c018i.o      udata   0x000098       data   0x00000a
-         .idata_display.o      idata   0x0000a2       data   0x000008
-          .idata___init.o      idata   0x0000aa       data   0x000000
-          .udata___init.o      udata   0x0000aa       data   0x000000
-        .idata_fxd2424u.o      idata   0x0000aa       data   0x000000
-        .udata_fxd2424u.o      udata   0x0000aa       data   0x000000
-        .idata_fxd1616u.o      idata   0x0000aa       data   0x000000
-        .udata_fxd1616u.o      udata   0x0000aa       data   0x000000
-           .udata_timer.o      udata   0x0000aa       data   0x000000
-       .idata_interrupt.o      idata   0x0000aa       data   0x000000
-       .udata_interrupt.o      udata   0x0000aa       data   0x000000
-            .idata_main.o      idata   0x0000aa       data   0x000000
-            .udata_main.o      udata   0x0000aa       data   0x000000
-         .udata_display.o      udata   0x0000aa       data   0x000000
-          .idata_global.o      idata   0x0000aa       data   0x000000
-          .udata_global.o      udata   0x0000aa       data   0x000000
-           .idata_c018i.o      idata   0x0000aa       data   0x000000
+                 .tmpdata      udata   0x000010       data   0x00000a
+             .idata_lcd.o      idata   0x000080       data   0x000061
+           .idata_timer.o      idata   0x0000e1       data   0x000018
+             .udata_lcd.o      udata   0x0000f9       data   0x000004
+        .udata_fxd3232u.o      udata   0x0000fd       data   0x000000
+        .idata_fxd2424u.o      idata   0x0000fd       data   0x000000
+        .udata_fxd2424u.o      udata   0x0000fd       data   0x000000
+        .idata_fxd1616u.o      idata   0x0000fd       data   0x000000
+        .udata_fxd1616u.o      udata   0x0000fd       data   0x000000
+        .idata_fxd3232u.o      idata   0x0000fd       data   0x000000
+             .idata_fsm.o      idata   0x0000fd       data   0x000000
+             .udata_fsm.o      udata   0x0000fd       data   0x000000
+           .idata_c018i.o      idata   0x0000fd       data   0x000000
+         .udata_fxm3232.o      udata   0x0000fd       data   0x000000
+         .idata_fxm3232.o      idata   0x0000fd       data   0x000000
+          .udata_global.o      udata   0x0000fd       data   0x000000
+           .udata_timer.o      udata   0x0000fd       data   0x000000
+       .idata_interrupt.o      idata   0x0000fd       data   0x000000
+       .udata_interrupt.o      udata   0x0000fd       data   0x000000
+            .idata_main.o      idata   0x0000fd       data   0x000000
+            .udata_main.o      udata   0x0000fd       data   0x000000
+          .udata___init.o      udata   0x0000fd       data   0x000000
+         .udata_display.o      udata   0x0000fd       data   0x000000
+          .idata___init.o      idata   0x0000fd       data   0x000000
+           .udata_c018i.o      udata   0x000100       data   0x00000a
+          .idata_global.o      idata   0x00010a       data   0x000009
                    .stack      udata   0x000e00       data   0x000100
+          .idata_button.o      idata   0x000f00       data   0x000048
+          .udata_button.o      udata   0x000f48       data   0x000030
+         .idata_display.o      idata   0x000f78       data   0x000008
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
 
@@ -78,43 +104,56 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x000015      
-                            0x000018    0x000add      
+                            0x000000    0x000016      
+                            0x000018    0x002343      
                             0x300001    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            2791 out of 66584 program addresses used, program memory utilization is 4%
+            9038 out of 66584 program addresses used, program memory utilization is 13%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D1616S   0x000902    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x000910    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00090c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x000922    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D2424S   0x000956    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                D2424SNEG   0x000964    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 D2424SOK   0x000960    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  D2424SX   0x00097c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  DA1616S   0x0008f2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA2424S   0x000942    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 FXD1616S   0x0008e0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x000a5e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                 FXD2424S   0x00092c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 FXD2424U   0x000a24    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
+                   D1616S   0x001ff6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x002004    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x002000    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x002016    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D2424S   0x00204a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                D2424SNEG   0x002058    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 D2424SOK   0x002054    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  D2424SX   0x002070    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  DA1616S   0x001fe6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA2424S   0x002036    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+         DisplayLcdScreen   0x00099a    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+        DisplayLcdScreen2   0x000a92    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+      DisplayLcdScreenOld   0x000b18    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                 FXD1616S   0x001fd4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x00220a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXD2424S   0x002020    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 FXD2424U   0x0021d0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
+                 FXD3232U   0x002188    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                  FXM3232   0x002118    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
       InterruptVectorHigh   0x000008    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
        InterruptVectorLow   0x000018    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
-             SetTimer0_ms   0x0004c4    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             SetTimer1_ms   0x0004e4    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             SetTimer3_ms   0x00051e    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-       ___return_lbl00000   0x000a88    program     static                          
+                LcdClearS   0x00093c    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            LcdPrintCharS   0x000b82    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+              LcdPrintNum   0x00087a    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+             LcdPrintNumS   0x000bd8    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+           LcdPrintString   0x0008c2    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          LcdPrintStringS   0x000e26    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+             SetTimer0_ms   0x001308    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             SetTimer1_ms   0x001328    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             SetTimer3_ms   0x001362    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+       ___return_lbl00000   0x002234    program     static                          
+       ___return_lbl00000   0x002186    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00000   0x000a5c    program     static                          
-       ___return_lbl00001   0x000ac4    program     static                          
-       ___return_lbl00002   0x000a22    program     static                          
+       ___return_lbl00000   0x0021ce    program     static                          
+       ___return_lbl00000   0x002208    program     static                          
+       ___return_lbl00001   0x002270    program     static                          
        ___return_lbl00002   0x00001c    program     static                          
+       ___return_lbl00002   0x002116    program     static                          
        ___return_lbl00003   0x00000c    program     static                          
                __config_0   0x300001    program     static D:\MPLABProjects\TrafficLight.X\main.c
                __config_1   0x300002    program     static D:\MPLABProjects\TrafficLight.X\main.c
@@ -128,51 +167,86 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                __config_8   0x30000b    program     static D:\MPLABProjects\TrafficLight.X\main.c
                __config_9   0x30000c    program     static D:\MPLABProjects\TrafficLight.X\main.c
                    __init   0x000006    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x000a8a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                _do_cinit   0x000986    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               __string_0   0x000014    program     static D:\MPLABProjects\TrafficLight.X\display\display.c
+               __string_1   0x000011    program     static D:\MPLABProjects\TrafficLight.X\display\display.c
+               __string_2   0x00000e    program     static D:\MPLABProjects\TrafficLight.X\display\display.c
+            __zero_memory   0x002236    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                _do_cinit   0x00207a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x000a58    program     static                          
-                 _startup   0x000aaa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x000aa0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                copy_loop   0x0009f8    program     static                          
-            copy_one_byte   0x0009fe    program     static                          
-                 delay_ms   0x000788    program     extern D:\MPLABProjects\TrafficLight.X\main.c
-                     done   0x000a22    program     static                          
-             done_copying   0x000a0c    program     static                          
-                  endloop   0x000a84    program     static                          
-                 high_isr   0x00064c    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
-            init_ext_int0   0x000560    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
-           init_interrupt   0x000558    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
-              init_system   0x00073e    program     extern D:\MPLABProjects\TrafficLight.X\main.c
-              init_timer0   0x000038    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              init_timer1   0x00017c    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              init_timer2   0x0002c6    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              init_timer3   0x0002fe    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-                 led_init   0x000810    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-                     loop   0x000aba    program     static                          
-                     loop   0x000a30    program     static                          
-                     loop   0x000a68    program     static                          
-                   loop_h   0x000a98    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_l   0x000aa2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  low_isr   0x000568    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
-                     main   0x00071c    program     extern D:\MPLABProjects\TrafficLight.X\main.c
-             start_timer0   0x0000f0    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             start_timer1   0x000236    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             start_timer2   0x0002f2    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             start_timer3   0x0003b4    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              stop_timer0   0x0000ec    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              stop_timer1   0x0002c2    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              stop_timer2   0x0002fa    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              stop_timer3   0x000440    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-                     test   0x0009a0    program     static                          
-               timer0_isr   0x000444    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer1_isr   0x000464    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer2_isr   0x000484    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer3_isr   0x0004a4    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-                toggleLed   0x00089c    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-               turnLedOff   0x000858    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-                turnLedOn   0x000814    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-               zero_block   0x000a98    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   _false   0x002204    program     static                          
+                   _false   0x0021ca    program     static                          
+                 _startup   0x002256    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+           button_process   0x0013e8    program     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+                compare_l   0x00224c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                copy_loop   0x0020ec    program     static                          
+            copy_one_byte   0x0020f2    program     static                          
+                 delay_ms   0x001f4c    program     extern D:\MPLABProjects\TrafficLight.X\main.c
+           displayCounter   0x001cb6    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+                     done   0x002116    program     static                          
+             done_copying   0x002100    program     static                          
+                  endloop   0x002230    program     static                          
+                 fsm_auto   0x001830    program     extern D:\MPLABProjects\TrafficLight.X\fsm\fsm.c
+                  fsm_man   0x0019e6    program     extern D:\MPLABProjects\TrafficLight.X\fsm\fsm.c
+                 high_isr   0x001e12    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
+            init_ext_int0   0x001d26    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
+           init_interrupt   0x001d1e    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
+          init_key_matrix   0x0015e0    program     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+                 init_lcd   0x0001fc    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+              init_system   0x001efe    program     extern D:\MPLABProjects\TrafficLight.X\main.c
+              init_timer0   0x000e7c    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              init_timer1   0x000fc0    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              init_timer2   0x00110a    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              init_timer3   0x001142    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+          is_button_press   0x00139c    program     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+                lcd_clear   0x00054e    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                lcd_delay   0x00005c    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+             lcd_power_of   0x000562    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+           lcd_print_char   0x0004ba    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          lcd_print_charS   0x0008f6    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            lcd_print_num   0x000644    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            lcd_print_str   0x0004d4    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+              lcd_putchar   0x0004a0    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          lcd_read_status   0x00030a    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          lcd_sendCommand   0x00017c    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+           lcd_set_cursor   0x000514    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            lcd_wait_busy   0x0003c0    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          lcd_write_4bits   0x0003e0    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            lcd_write_cmd   0x000426    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+           lcd_write_data   0x000462    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                 led_init   0x001b44    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+                     loop   0x002266    program     static                          
+                     loop   0x002196    program     static                          
+                     loop   0x0021dc    program     static                          
+                     loop   0x002214    program     static                          
+                   loop_h   0x002244    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_l   0x00224e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  low_isr   0x001d2e    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
+                     main   0x001ee6    program     extern D:\MPLABProjects\TrafficLight.X\main.c
+          scan_key_matrix   0x0015e8    program     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+           setRoad1_green   0x001c48    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+             setRoad1_red   0x001c14    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+          setRoad1_yellow   0x001c2e    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+           setRoad2_green   0x001c9a    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+             setRoad2_red   0x001c62    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+          setRoad2_yellow   0x001c7e    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+             start_timer0   0x000f34    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             start_timer1   0x00107a    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             start_timer2   0x001136    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             start_timer3   0x0011f8    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              stop_timer0   0x000f30    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              stop_timer1   0x001106    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              stop_timer2   0x00113e    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              stop_timer3   0x001284    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+                     test   0x002094    program     static                          
+               timer0_isr   0x001288    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer1_isr   0x0012a8    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer2_isr   0x0012c8    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer3_isr   0x0012e8    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+                toggleLed   0x001bd0    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+               turnLedOff   0x001b8c    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+                turnLedOn   0x001b48    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+                 v_timer0   0x0000ec    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+               zero_block   0x002244    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -255,6 +329,7 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                  LATEbits   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    LVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                LVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                LcdScreen   0x0000c1       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
                    OSCCON   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                OSCCONbits   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   OSCTUNE   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -356,6 +431,7 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                     TXREG   0x000fad       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TXSTA   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TXSTAbits   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 UserFont   0x000080       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
                         W   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    WDTCON   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                WDTCONbits   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -380,27 +456,50 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                   __REMB1   0x000004       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB2   0x000003       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB3   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                  __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\button\button.c
+                  __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\display\display.c
                   __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\main.c
                   __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\timer\timer.c
-            arrayMapOfLed   0x0000a2       data     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-                curr_byte   0x00009b       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x00009d       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x00009f       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     prom   0x000098       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               timer0_cnt   0x000090       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              timer0_flag   0x000088       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             timer0_value   0x000080       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer1_cnt   0x000092       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              timer1_flag   0x000089       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             timer1_value   0x000082       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer2_cnt   0x000094       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              timer2_flag   0x00008a       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             timer2_value   0x000084       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer3_cnt   0x000096       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              timer3_flag   0x00008b       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             timer3_value   0x000086       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-                   v_cnt0   0x00008c       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-                   v_cnt1   0x00008e       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+            arrayMapOfLed   0x000f78       data     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+      arrayMaskInputOfKey   0x000f24       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+     arrayMaskOutputOfKey   0x000f20       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+            button_buffer   0x000f68       data     static D:\MPLABProjects\TrafficLight.X\button\button.c
+           button_counter   0x000f38       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+             button_state   0x000f28       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+                 counter1   0x00010b       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                 counter2   0x00010c       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                curr_byte   0x000103       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x000105       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+              current_col   0x0000fb       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+              current_row   0x0000f9       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                       d1   0x000f48       data     static D:\MPLABProjects\TrafficLight.X\button\button.c
+                       d2   0x000f58       data     static D:\MPLABProjects\TrafficLight.X\button\button.c
+                 data_ptr   0x000107       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 key_flag   0x000f00       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+               max_green1   0x000111       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+               max_green2   0x000112       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                 max_red1   0x00010d       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                 max_red2   0x00010e       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+              max_yellow1   0x00010f       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+              max_yellow2   0x000110       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                     prom   0x000100       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                statusLCD   0x0000c0       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+               timer0_cnt   0x0000f1       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              timer0_flag   0x0000e9       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             timer0_value   0x0000e1       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer1_cnt   0x0000f3       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              timer1_flag   0x0000ea       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             timer1_value   0x0000e3       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer2_cnt   0x0000f5       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              timer2_flag   0x0000eb       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             timer2_value   0x0000e5       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer3_cnt   0x0000f7       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              timer3_flag   0x0000ec       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             timer3_value   0x0000e7       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+           traffic_status   0x00010a       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                   v_cnt0   0x0000ed       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+                   v_cnt1   0x0000ef       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
 
 
 
@@ -412,73 +511,121 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                    __init   0x000006    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
       InterruptVectorHigh   0x000008    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
        ___return_lbl00003   0x00000c    program     static                          
+               __string_2   0x00000e    program     static D:\MPLABProjects\TrafficLight.X\display\display.c
+               __string_1   0x000011    program     static D:\MPLABProjects\TrafficLight.X\display\display.c
+               __string_0   0x000014    program     static D:\MPLABProjects\TrafficLight.X\display\display.c
        InterruptVectorLow   0x000018    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
        ___return_lbl00002   0x00001c    program     static                          
-              init_timer0   0x000038    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              stop_timer0   0x0000ec    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             start_timer0   0x0000f0    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              init_timer1   0x00017c    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             start_timer1   0x000236    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              stop_timer1   0x0002c2    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              init_timer2   0x0002c6    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             start_timer2   0x0002f2    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              stop_timer2   0x0002fa    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              init_timer3   0x0002fe    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             start_timer3   0x0003b4    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              stop_timer3   0x000440    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer0_isr   0x000444    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer1_isr   0x000464    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer2_isr   0x000484    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer3_isr   0x0004a4    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             SetTimer0_ms   0x0004c4    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             SetTimer1_ms   0x0004e4    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             SetTimer3_ms   0x00051e    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-           init_interrupt   0x000558    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
-            init_ext_int0   0x000560    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
-                  low_isr   0x000568    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
-                 high_isr   0x00064c    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
-                     main   0x00071c    program     extern D:\MPLABProjects\TrafficLight.X\main.c
-              init_system   0x00073e    program     extern D:\MPLABProjects\TrafficLight.X\main.c
-                 delay_ms   0x000788    program     extern D:\MPLABProjects\TrafficLight.X\main.c
-                 led_init   0x000810    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-                turnLedOn   0x000814    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-               turnLedOff   0x000858    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-                toggleLed   0x00089c    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-                 FXD1616S   0x0008e0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x0008f2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D1616S   0x000902    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x00090c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x000910    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x000922    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD2424S   0x00092c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  DA2424S   0x000942    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                   D2424S   0x000956    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 D2424SOK   0x000960    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                D2424SNEG   0x000964    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  D2424SX   0x00097c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                _do_cinit   0x000986    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0009a0    program     static                          
-                copy_loop   0x0009f8    program     static                          
-            copy_one_byte   0x0009fe    program     static                          
-             done_copying   0x000a0c    program     static                          
-                     done   0x000a22    program     static                          
-       ___return_lbl00002   0x000a22    program     static                          
-                 FXD2424U   0x000a24    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
-                     loop   0x000a30    program     static                          
-                   _false   0x000a58    program     static                          
-       ___return_lbl00000   0x000a5c    program     static                          
-                 FXD1616U   0x000a5e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x000a68    program     static                          
-                  endloop   0x000a84    program     static                          
-       ___return_lbl00000   0x000a88    program     static                          
-            __zero_memory   0x000a8a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-               zero_block   0x000a98    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_h   0x000a98    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                compare_l   0x000aa0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_l   0x000aa2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 _startup   0x000aaa    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x000aba    program     static                          
-       ___return_lbl00001   0x000ac4    program     static                          
+                lcd_delay   0x00005c    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                 v_timer0   0x0000ec    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          lcd_sendCommand   0x00017c    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                 init_lcd   0x0001fc    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          lcd_read_status   0x00030a    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            lcd_wait_busy   0x0003c0    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          lcd_write_4bits   0x0003e0    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            lcd_write_cmd   0x000426    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+           lcd_write_data   0x000462    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+              lcd_putchar   0x0004a0    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+           lcd_print_char   0x0004ba    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            lcd_print_str   0x0004d4    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+           lcd_set_cursor   0x000514    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                lcd_clear   0x00054e    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+             lcd_power_of   0x000562    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            lcd_print_num   0x000644    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+              LcdPrintNum   0x00087a    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+           LcdPrintString   0x0008c2    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          lcd_print_charS   0x0008f6    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                LcdClearS   0x00093c    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+         DisplayLcdScreen   0x00099a    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+        DisplayLcdScreen2   0x000a92    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+      DisplayLcdScreenOld   0x000b18    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+            LcdPrintCharS   0x000b82    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+             LcdPrintNumS   0x000bd8    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+          LcdPrintStringS   0x000e26    program     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+              init_timer0   0x000e7c    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              stop_timer0   0x000f30    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             start_timer0   0x000f34    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              init_timer1   0x000fc0    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             start_timer1   0x00107a    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              stop_timer1   0x001106    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              init_timer2   0x00110a    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             start_timer2   0x001136    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              stop_timer2   0x00113e    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              init_timer3   0x001142    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             start_timer3   0x0011f8    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              stop_timer3   0x001284    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer0_isr   0x001288    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer1_isr   0x0012a8    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer2_isr   0x0012c8    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer3_isr   0x0012e8    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             SetTimer0_ms   0x001308    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             SetTimer1_ms   0x001328    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             SetTimer3_ms   0x001362    program     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+          is_button_press   0x00139c    program     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+           button_process   0x0013e8    program     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+          init_key_matrix   0x0015e0    program     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+          scan_key_matrix   0x0015e8    program     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+                 fsm_auto   0x001830    program     extern D:\MPLABProjects\TrafficLight.X\fsm\fsm.c
+                  fsm_man   0x0019e6    program     extern D:\MPLABProjects\TrafficLight.X\fsm\fsm.c
+                 led_init   0x001b44    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+                turnLedOn   0x001b48    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+               turnLedOff   0x001b8c    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+                toggleLed   0x001bd0    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+             setRoad1_red   0x001c14    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+          setRoad1_yellow   0x001c2e    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+           setRoad1_green   0x001c48    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+             setRoad2_red   0x001c62    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+          setRoad2_yellow   0x001c7e    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+           setRoad2_green   0x001c9a    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+           displayCounter   0x001cb6    program     extern D:\MPLABProjects\TrafficLight.X\display\display.c
+           init_interrupt   0x001d1e    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
+            init_ext_int0   0x001d26    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
+                  low_isr   0x001d2e    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
+                 high_isr   0x001e12    program     extern D:\MPLABProjects\TrafficLight.X\interrupt\interrupt.c
+                     main   0x001ee6    program     extern D:\MPLABProjects\TrafficLight.X\main.c
+              init_system   0x001efe    program     extern D:\MPLABProjects\TrafficLight.X\main.c
+                 delay_ms   0x001f4c    program     extern D:\MPLABProjects\TrafficLight.X\main.c
+                 FXD1616S   0x001fd4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x001fe6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x001ff6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x002000    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x002004    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x002016    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD2424S   0x002020    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  DA2424S   0x002036    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                   D2424S   0x00204a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 D2424SOK   0x002054    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                D2424SNEG   0x002058    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  D2424SX   0x002070    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                _do_cinit   0x00207a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x002094    program     static                          
+                copy_loop   0x0020ec    program     static                          
+            copy_one_byte   0x0020f2    program     static                          
+             done_copying   0x002100    program     static                          
+       ___return_lbl00002   0x002116    program     static                          
+                     done   0x002116    program     static                          
+                  FXM3232   0x002118    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x002186    program     static                          
+                 FXD3232U   0x002188    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd3232u.c
+                     loop   0x002196    program     static                          
+                   _false   0x0021ca    program     static                          
+       ___return_lbl00000   0x0021ce    program     static                          
+                 FXD2424U   0x0021d0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
+                     loop   0x0021dc    program     static                          
+                   _false   0x002204    program     static                          
+       ___return_lbl00000   0x002208    program     static                          
+                 FXD1616U   0x00220a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x002214    program     static                          
+                  endloop   0x002230    program     static                          
+       ___return_lbl00000   0x002234    program     static                          
+            __zero_memory   0x002236    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+               zero_block   0x002244    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_h   0x002244    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                compare_l   0x00224c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_l   0x00224e    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 _startup   0x002256    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x002266    program     static                          
+       ___return_lbl00001   0x002270    program     static                          
                __config_0   0x300001    program     static D:\MPLABProjects\TrafficLight.X\main.c
                __config_1   0x300002    program     static D:\MPLABProjects\TrafficLight.X\main.c
                __config_2   0x300003    program     static D:\MPLABProjects\TrafficLight.X\main.c
@@ -493,10 +640,10 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                      SIGN   0x000000       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
             __FPFLAGSbits   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                 __AARGB7   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB3   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB6   0x000003       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB7   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB2   0x000003       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB5   0x000004       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB1   0x000004       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB4   0x000005       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
@@ -511,77 +658,102 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                  __BARGB1   0x00000d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
                  __BARGB0   0x00000e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
                    __BEXP   0x00000f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                  __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                  __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\button\button.c
+                  __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\display\display.c
                   __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\timer\timer.c
                   __tmp_0   0x000010       data     static D:\MPLABProjects\TrafficLight.X\main.c
-             timer0_value   0x000080       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             timer1_value   0x000082       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             timer2_value   0x000084       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-             timer3_value   0x000086       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              timer0_flag   0x000088       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              timer1_flag   0x000089       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              timer2_flag   0x00008a       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-              timer3_flag   0x00008b       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-                   v_cnt0   0x00008c       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-                   v_cnt1   0x00008e       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer0_cnt   0x000090       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer1_cnt   0x000092       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer2_cnt   0x000094       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-               timer3_cnt   0x000096       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
-                     prom   0x000098       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                curr_byte   0x00009b       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x00009d       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x00009f       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-            arrayMapOfLed   0x0000a2       data     extern D:\MPLABProjects\TrafficLight.X\display\display.c
-                PORTAbits   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 UserFont   0x000080       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                statusLCD   0x0000c0       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                LcdScreen   0x0000c1       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+             timer0_value   0x0000e1       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             timer1_value   0x0000e3       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             timer2_value   0x0000e5       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+             timer3_value   0x0000e7       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              timer0_flag   0x0000e9       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              timer1_flag   0x0000ea       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              timer2_flag   0x0000eb       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              timer3_flag   0x0000ec       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+                   v_cnt0   0x0000ed       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+                   v_cnt1   0x0000ef       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer0_cnt   0x0000f1       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer1_cnt   0x0000f3       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer2_cnt   0x0000f5       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+               timer3_cnt   0x0000f7       data     extern D:\MPLABProjects\TrafficLight.X\timer\timer.c
+              current_row   0x0000f9       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+              current_col   0x0000fb       data     extern D:\MPLABProjects\TrafficLight.X\lcd\lcd.c
+                     prom   0x000100       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                curr_byte   0x000103       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x000105       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x000107       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+           traffic_status   0x00010a       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                 counter1   0x00010b       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                 counter2   0x00010c       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                 max_red1   0x00010d       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                 max_red2   0x00010e       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+              max_yellow1   0x00010f       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+              max_yellow2   0x000110       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+               max_green1   0x000111       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+               max_green2   0x000112       data     extern D:\MPLABProjects\TrafficLight.X\global\global.c
+                 key_flag   0x000f00       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+     arrayMaskOutputOfKey   0x000f20       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+      arrayMaskInputOfKey   0x000f24       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+             button_state   0x000f28       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+           button_counter   0x000f38       data     extern D:\MPLABProjects\TrafficLight.X\button\button.c
+                       d1   0x000f48       data     static D:\MPLABProjects\TrafficLight.X\button\button.c
+                       d2   0x000f58       data     static D:\MPLABProjects\TrafficLight.X\button\button.c
+            button_buffer   0x000f68       data     static D:\MPLABProjects\TrafficLight.X\button\button.c
+            arrayMapOfLed   0x000f78       data     extern D:\MPLABProjects\TrafficLight.X\display\display.c
                     PORTA   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                PORTAbits   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 PORTBbits   0x000f81       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PORTB   0x000f81       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 PORTCbits   0x000f82       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PORTC   0x000f82       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PORTD   0x000f83       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 PORTDbits   0x000f83       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    PORTE   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 PORTEbits   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     LATA   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    PORTE   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  LATAbits   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 LATBbits   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     LATA   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATB   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 LATBbits   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  LATCbits   0x000f8b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATC   0x000f8b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  LATDbits   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATD   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 LATEbits   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATE   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     DDRA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 DDRAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 LATEbits   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TRISA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TRISAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     DDRB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 DDRBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     DDRA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 DDRAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TRISB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TRISBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                TRISCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 DDRBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     DDRB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDRCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                TRISCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TRISC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TRISDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TRISD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 DDRDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                TRISEbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 DDRDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TRISE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                TRISEbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDREbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   OSCTUNE   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               OSCTUNEbits   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     PIE1   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  PIE1bits   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 PIR1bits   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     PIE1   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIR1   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 PIR1bits   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      IPR1   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     PIE2   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  PIE2bits   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     PIE2   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  PIR2bits   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIR2   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  IPR2bits   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -592,8 +764,8 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                    EEDATA   0x000fa8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     EEADR   0x000fa9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    EEADRH   0x000faa       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 RCSTAbits   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TXSTAbits   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TXSTA   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TXREG   0x000fad       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -604,14 +776,14 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                     T3CON   0x000fb1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR3L   0x000fb2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR3H   0x000fb3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                CMCONbits   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     CMCON   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                CMCONbits   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CVRCON   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                CVRCONbits   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   ECCP1AS   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               ECCP1ASbits   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  PWM1CON   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               PWM1CONbits   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  PWM1CON   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   BAUDCON   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               BAUDCONbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   BAUDCTL   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -626,49 +798,49 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                     CCPR1   0x000fbe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CCPR1L   0x000fbe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CCPR1H   0x000fbf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-               ADCON2bits   0x000fc0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON2   0x000fc0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+               ADCON2bits   0x000fc0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                ADCON1bits   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    ADRES   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADRESL   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    ADRES   0x000fc3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADRESH   0x000fc4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  SSPCON2   0x000fc5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               SSPCON2bits   0x000fc5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  SSPCON1   0x000fc6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  SSPCON2   0x000fc5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               SSPCON1bits   0x000fc6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  SSPSTAT   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  SSPCON1   0x000fc6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               SSPSTATbits   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  SSPSTAT   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    SSPADD   0x000fc8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    SSPBUF   0x000fc9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     T2CON   0x000fca       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 T2CONbits   0x000fca       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                       PR2   0x000fcb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      TMR2   0x000fcc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                T1CONbits   0x000fcd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     T1CON   0x000fcd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                T1CONbits   0x000fcd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR1L   0x000fce       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR1H   0x000fcf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     RCON   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  RCONbits   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-               WDTCONbits   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     RCON   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    WDTCON   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+               WDTCONbits   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                LVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    LVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-              HLVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   HLVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+              HLVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                OSCCONbits   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    OSCCON   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    T0CON   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 T0CONbits   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    T0CON   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR0L   0x000fd6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR0H   0x000fd7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                STATUSbits   0x000fd8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    STATUS   0x000fd8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    FSR2L   0x000fd9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      FSR2   0x000fd9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    FSR2L   0x000fd9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     FSR2H   0x000fda       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    PLUSW2   0x000fdb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   PREINC2   0x000fdc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -676,8 +848,8 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                  POSTINC2   0x000fde       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     INDF2   0x000fdf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                       BSR   0x000fe0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    FSR1L   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      FSR1   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    FSR1L   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     FSR1H   0x000fe2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    PLUSW1   0x000fe3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   PREINC1   0x000fe4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -686,8 +858,8 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                     INDF1   0x000fe7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      WREG   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                         W   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     FSR0   0x000fe9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     FSR0L   0x000fe9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     FSR0   0x000fe9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     FSR0H   0x000fea       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    PLUSW0   0x000feb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   PREINC0   0x000fec       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -704,8 +876,8 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                     PRODL   0x000ff3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PRODH   0x000ff4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    TABLAT   0x000ff5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  TBLPTRL   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    TBLPTR   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  TBLPTRL   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   TBLPTRH   0x000ff7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   TBLPTRU   0x000ff8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                       PCL   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -714,8 +886,8 @@ Linker Map File - Created Fri Feb 10 00:09:07 2023
                    PCLATU   0x000ffb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    STKPTR   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                STKPTRbits   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     TOSL   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                       TOS   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     TOSL   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      TOSH   0x000ffe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      TOSU   0x000fff       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
 

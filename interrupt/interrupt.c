@@ -90,6 +90,7 @@ void high_isr(void)
 		stop_timer3();
 		PIR2bits.TMR3IF = 0;
 		start_timer3();
+        scan_key_matrix();
 		timer3_isr();
 	}
 	if (INTCONbits.INT0IF) // ext_interupt0

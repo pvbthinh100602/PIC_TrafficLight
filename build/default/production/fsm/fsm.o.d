@@ -1,9 +1,10 @@
-build/default/production/interrupt/interrupt.o:  \
-	D:/MPLABProjects/TrafficLight.X/interrupt/interrupt.c  \
+build/default/production/fsm/fsm.o:  \
+	D:/MPLABProjects/TrafficLight.X/fsm/fsm.c  \
 	D:/MPLABProjects/TrafficLight.X/display/display.h  \
 	D:/MPLABProjects/TrafficLight.X/timer/timer.h  \
 	D:/MPLABProjects/TrafficLight.X/button/button.h  \
 	D:/MPLABProjects/TrafficLight.X/lcd/lcd.h  \
-	D:/MPLABProjects/TrafficLight.X/interrupt/interrupt.h  \
+	D:/MPLABProjects/TrafficLight.X/fsm/fsm.h  \
 	D:/MPLABProjects/TrafficLight.X/global/global.h  \
+	D:/MPLABProjects/TrafficLight.X/interrupt/interrupt.h  \
 

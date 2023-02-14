@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=global/global.c display/display.c main.c interrupt/interrupt.c timer/timer.c
+SOURCEFILES_QUOTED_IF_SPACED=global/global.c display/display.c main.c interrupt/interrupt.c timer/timer.c button/button.c lcd/lcd.c fsm/fsm.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/global/global.o ${OBJECTDIR}/display/display.o ${OBJECTDIR}/main.o ${OBJECTDIR}/interrupt/interrupt.o ${OBJECTDIR}/timer/timer.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/global/global.o.d ${OBJECTDIR}/display/display.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/interrupt/interrupt.o.d ${OBJECTDIR}/timer/timer.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/global/global.o ${OBJECTDIR}/display/display.o ${OBJECTDIR}/main.o ${OBJECTDIR}/interrupt/interrupt.o ${OBJECTDIR}/timer/timer.o ${OBJECTDIR}/button/button.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/fsm/fsm.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/global/global.o.d ${OBJECTDIR}/display/display.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/interrupt/interrupt.o.d ${OBJECTDIR}/timer/timer.o.d ${OBJECTDIR}/button/button.o.d ${OBJECTDIR}/lcd/lcd.o.d ${OBJECTDIR}/fsm/fsm.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/global/global.o ${OBJECTDIR}/display/display.o ${OBJECTDIR}/main.o ${OBJECTDIR}/interrupt/interrupt.o ${OBJECTDIR}/timer/timer.o
+OBJECTFILES=${OBJECTDIR}/global/global.o ${OBJECTDIR}/display/display.o ${OBJECTDIR}/main.o ${OBJECTDIR}/interrupt/interrupt.o ${OBJECTDIR}/timer/timer.o ${OBJECTDIR}/button/button.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/fsm/fsm.o
 
 # Source Files
-SOURCEFILES=global/global.c display/display.c main.c interrupt/interrupt.c timer/timer.c
+SOURCEFILES=global/global.c display/display.c main.c interrupt/interrupt.c timer/timer.c button/button.c lcd/lcd.c fsm/fsm.c
 
 
 CFLAGS=
@@ -141,6 +141,30 @@ ${OBJECTDIR}/timer/timer.o: timer/timer.c  nbproject/Makefile-${CND_CONF}.mk
 	@${DEP_GEN} -d ${OBJECTDIR}/timer/timer.o 
 	@${FIXDEPS} "${OBJECTDIR}/timer/timer.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/button/button.o: button/button.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/button" 
+	@${RM} ${OBJECTDIR}/button/button.o.d 
+	@${RM} ${OBJECTDIR}/button/button.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/button/button.o   button/button.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/button/button.o 
+	@${FIXDEPS} "${OBJECTDIR}/button/button.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/lcd/lcd.o: lcd/lcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lcd" 
+	@${RM} ${OBJECTDIR}/lcd/lcd.o.d 
+	@${RM} ${OBJECTDIR}/lcd/lcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/lcd/lcd.o   lcd/lcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/lcd/lcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/lcd/lcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/fsm/fsm.o: fsm/fsm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/fsm" 
+	@${RM} ${OBJECTDIR}/fsm/fsm.o.d 
+	@${RM} ${OBJECTDIR}/fsm/fsm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/fsm/fsm.o   fsm/fsm.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/fsm/fsm.o 
+	@${FIXDEPS} "${OBJECTDIR}/fsm/fsm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/global/global.o: global/global.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/global" 
@@ -181,6 +205,30 @@ ${OBJECTDIR}/timer/timer.o: timer/timer.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/timer/timer.o   timer/timer.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/timer/timer.o 
 	@${FIXDEPS} "${OBJECTDIR}/timer/timer.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/button/button.o: button/button.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/button" 
+	@${RM} ${OBJECTDIR}/button/button.o.d 
+	@${RM} ${OBJECTDIR}/button/button.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/button/button.o   button/button.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/button/button.o 
+	@${FIXDEPS} "${OBJECTDIR}/button/button.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/lcd/lcd.o: lcd/lcd.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/lcd" 
+	@${RM} ${OBJECTDIR}/lcd/lcd.o.d 
+	@${RM} ${OBJECTDIR}/lcd/lcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/lcd/lcd.o   lcd/lcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/lcd/lcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/lcd/lcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/fsm/fsm.o: fsm/fsm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/fsm" 
+	@${RM} ${OBJECTDIR}/fsm/fsm.o.d 
+	@${RM} ${OBJECTDIR}/fsm/fsm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/fsm/fsm.o   fsm/fsm.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/fsm/fsm.o 
+	@${FIXDEPS} "${OBJECTDIR}/fsm/fsm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

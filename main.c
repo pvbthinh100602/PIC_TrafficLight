@@ -1,23 +1,27 @@
 #include "main.h"
+#include "lcd/lcd.h"
+#include "fsm/fsm.h"
 
 void delay_ms(int value);
 void init_system();
 
 void main(){
     init_system();
-    SetTimer1_ms(1000);
     while(1){
-        if(timer1_flag == 1){
-            toggleLed(0);
-            SetTimer1_ms(1000);
-        }
+        LcdClearS();
+        fsm_auto();
+        fsm_man();
+        displayCounter();
+        DisplayLcdScreen();
     }
 }
 
 void init_system(){
     TRISB = 0x00;
-    led_init();
+    init_lcd();
+//    led_init();
     init_interrupt();
+    init_key_matrix();    
     init_timer0(4695);  //dinh thoi 1ms 
     init_timer1(9390);  //dinh thoi 2ms
 	init_timer3(46950); //dinh thoi 10ms
