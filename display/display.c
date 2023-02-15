@@ -1,5 +1,9 @@
 #include "display.h"
 
+#define RED_LIGHT       "  R"
+#define YELLOW_LIGHT    " Y "
+#define GREEN_LIGHT     "G  "
+
 unsigned char arrayMapOfLed[8] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80};
 
 void led_init(){
@@ -25,15 +29,15 @@ void toggleLed(unsigned char index){
 }
 
 void setRoad1_red(){
-    LcdPrintStringS(0,0,"Re");
+    LcdPrintStringS(1,0,RED_LIGHT);
 }
 
 void setRoad1_yellow(){
-    LcdPrintStringS(0,0,"Ye");
+    LcdPrintStringS(1,0,YELLOW_LIGHT);
 }
 
 void setRoad1_green(){
-    LcdPrintStringS(0,0,"Gr");
+    LcdPrintStringS(1,0,GREEN_LIGHT);
 }
 
 void toggleRoad1_red();
@@ -41,20 +45,33 @@ void toggleRoad1_yellow();
 void toggleRoad1_green();
 
 void setRoad2_red(){
-    LcdPrintStringS(1,0,"Re");
+    LcdPrintStringS(1,8,RED_LIGHT);
 }
 
 void setRoad2_yellow(){
-    LcdPrintStringS(1,0,"Ye");
+    LcdPrintStringS(1,8,YELLOW_LIGHT);
 }
 
 void setRoad2_green(){
-    LcdPrintStringS(1,0,"Gr");
+    LcdPrintStringS(1,8,GREEN_LIGHT);
 }
 
-void displayCounter(){
-    if(counter1 != 0) LcdPrintNumS(0,5,counter1);
-    if(counter2 != 0) LcdPrintNumS(1,5,counter2);
+void displayCounter1(){
+    if(counter1 != 0) {
+        LcdPrintNumS(1,4,counter1/10);
+        LcdPrintNumS(1,5,counter1%10);
+    } else {
+        LcdPrintStringS(1,4,"  ");
+    }
+}
+
+void displayCounter2(){
+    if(counter1 != 0) {
+        LcdPrintNumS(1,12,counter2/10);
+        LcdPrintNumS(1,13,counter2%10);
+    } else {
+        LcdPrintStringS(1,4,"  ");
+    }
 }
 
 void toggleRoad2_red();
