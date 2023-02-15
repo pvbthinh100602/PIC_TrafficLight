@@ -16,8 +16,9 @@
 #define MAX_ROW			4
 
 extern unsigned int key_code[];
-
+extern unsigned int long_key_flag[];
 unsigned char is_button_press(unsigned char index);
+unsigned char is_button_long_press(unsigned char index);
 void init_key_matrix();
 void scan_key_matrix();
 //void button_process();

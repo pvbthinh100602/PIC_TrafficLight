@@ -8,9 +8,11 @@ void init_system();
 void main(){
     init_system();
     while(1){
-        LcdClearS();
+//        LcdClearS();
+        fsm_mode();
         fsm_auto();
         fsm_man();
+        fsm_config();
         displayCounter();
         DisplayLcdScreen();
     }

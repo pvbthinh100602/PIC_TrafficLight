@@ -31,6 +31,7 @@ void fsm_mode(){
                 counter1 = max_red1;
                 counter2 = max_green2;       
             }
+            clear_button_flags();
             break;
         case MODE_MAN:
             LcdPrintStringS(0,0,"  MANUAL MODE   ");
@@ -51,10 +52,12 @@ void fsm_mode(){
             }
             if(timer3_flag){
                 SetTimer3_ms(1000);
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
                 counter1 = max_red1;
                 counter2 = max_green2;       
             }
+            clear_button_flags();
             break;
         case MODE_SLOW:
             LcdPrintStringS(0,0," SLOWDOWN MODE  ");
@@ -70,15 +73,17 @@ void fsm_mode(){
                 traffic_status = MODE_MAN;
             }
             if(is_button_press(MODE_BUTTON)){                
-                traffic_status = SLOW;
+                traffic_status = AUTO_SLOW;
                 SetTimer3_ms(1000);
             }
             if(timer3_flag){
                 SetTimer3_ms(1000);
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
                 counter1 = max_red1;
                 counter2 = max_green2;       
             }
+            clear_button_flags();
             break;
         case MODE_CONFIG:
             LcdPrintStringS(0,0,"  CONFIG MODE   ");
@@ -93,16 +98,19 @@ void fsm_mode(){
                 SetTimer3_ms(20000);
                 traffic_status = MODE_SLOW;
             }
-            if(is_button_press(MODE_BUTTON)){                
+            if(is_button_press(MODE_BUTTON)){
+                SetTimer3_ms(20000);                
                 traffic_status = CONFIG_RED1;
                 counter1 = max_red1;
             }
             if(timer3_flag){
                 SetTimer3_ms(1000);
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
                 counter1 = max_red1;
                 counter2 = max_green2;       
             }
+            clear_button_flags();
             break;
         default:
             break;
@@ -123,10 +131,11 @@ void fsm_auto(){
                     traffic_status = AUTO_RED_YELLOW;
                 }
             }
-            if(is_button_press(MODE_BUTTON)){
+            if(is_button_long_press(MODE_BUTTON)){
                 traffic_status = MODE_AUTO;
                 SetTimer3_ms(20000);
             }
+            clear_button_flags();
             break;
         case AUTO_RED_YELLOW:
             setRoad1_red();
@@ -141,10 +150,11 @@ void fsm_auto(){
                     traffic_status = AUTO_GREEN_RED;
                 }
             }
-            if(is_button_press(MODE_BUTTON)){
+            if(is_button_long_press(MODE_BUTTON)){
                 traffic_status = MODE_AUTO;
                 SetTimer3_ms(20000);
-            }            
+            }
+            clear_button_flags();
             break;
         case AUTO_GREEN_RED:
             setRoad1_green();
@@ -158,10 +168,11 @@ void fsm_auto(){
                     traffic_status = AUTO_YELLOW_RED;
                 }
             }
-            if(is_button_press(MODE_BUTTON)){
+            if(is_button_long_press(MODE_BUTTON)){
                 traffic_status = MODE_AUTO;
                 SetTimer3_ms(20000);
-            }            
+            }
+            clear_button_flags();
             break;        
         case AUTO_YELLOW_RED:
             setRoad1_yellow();
@@ -176,11 +187,22 @@ void fsm_auto(){
                     traffic_status = AUTO_RED_GREEN;
                 }
             } 
-            if(is_button_press(MODE_BUTTON)){
+            if(is_button_long_press(MODE_BUTTON)){
                 traffic_status = MODE_AUTO;
                 SetTimer3_ms(20000);
             }
+            clear_button_flags();
             break;
+        case AUTO_SLOW:
+            if(timer3_flag){
+                toggleRoad1_yellow();
+                toggleRoad2_yellow();
+                SetTimer3_ms(1000);
+            }
+            if(is_button_long_press(MODE_BUTTON)){
+                SetTimer3_ms(20000);
+                traffic_status = MODE_SLOW;
+            }
         default:
             break;
     }
@@ -195,18 +217,15 @@ void fsm_man(){
                 SetTimer3_ms(1000);
                 counter1 = max_yellow2;
                 counter2 = max_yellow2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_YELLOW;
             }
             if(is_button_press(INC_BUTTON)){
                 SetTimer3_ms(20000);
                 traffic_status = MAN_RED_YELLOW;
-            }
-            if(is_button_press(DEC_BUTTON)){
-                SetTimer3_ms(20000);
-                traffic_status = MAN_YELLOW_RED;
             }            
-            if(is_button_press(MODE_BUTTON)){
-                traffic_status = MODE_MAN;
+            if(is_button_long_press(MODE_BUTTON)){
+                traffic_status = MODE_MAN;                
                 SetTimer3_ms(20000);
             }
             break;
@@ -217,17 +236,14 @@ void fsm_man(){
                 SetTimer3_ms(1000);
                 counter1 = max_green1;
                 counter2 = max_red2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_GREEN_RED;
             }            
             if(is_button_press(INC_BUTTON)){
                 SetTimer3_ms(20000);
                 traffic_status = MAN_GREEN_RED;
-            }           
-            if(is_button_press(DEC_BUTTON)){
-                SetTimer3_ms(20000);
-                traffic_status = MAN_RED_GREEN;
-            }            
-            if(is_button_press(MODE_BUTTON)){
+            }                      
+            if(is_button_long_press(MODE_BUTTON)){
                 traffic_status = MODE_MAN;
                 SetTimer3_ms(20000);
             }
@@ -239,20 +255,18 @@ void fsm_man(){
                 SetTimer3_ms(1000);
                 counter1 = max_yellow1;
                 counter2 = max_yellow2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_YELLOW_RED;
             }
             if(is_button_press(INC_BUTTON)){
                 SetTimer3_ms(20000);
                 traffic_status = MAN_YELLOW_RED;
-            }            
-            if(is_button_press(DEC_BUTTON)){
-                SetTimer3_ms(20000);
-                traffic_status = MAN_RED_YELLOW;
-            }            
-            if(is_button_press(MODE_BUTTON)){
+            }              
+            if(is_button_long_press(MODE_BUTTON)){
                 traffic_status = MODE_MAN;
                 SetTimer3_ms(20000);
             }
+            clear_button_flags();
             break;
         case MAN_YELLOW_RED:
             setRoad1_yellow();
@@ -261,20 +275,18 @@ void fsm_man(){
                 SetTimer3_ms(1000);
                 counter1 = max_red1;
                 counter2 = max_green2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
             }
             if(is_button_press(INC_BUTTON)){
                 SetTimer3_ms(20000);
                 traffic_status = MAN_RED_GREEN;
             }
-            if(is_button_press(DEC_BUTTON)){
-                SetTimer3_ms(20000);
-                traffic_status = MAN_GREEN_RED;
-            }
-            if(is_button_press(MODE_BUTTON)){
+            if(is_button_long_press(MODE_BUTTON)){
                 traffic_status = MODE_MAN;
                 SetTimer3_ms(20000);
             }
+            clear_button_flags();
             break;            
     }
 }
@@ -282,120 +294,244 @@ void fsm_man(){
 void fsm_config(){
     switch(traffic_status){
         case CONFIG_RED1:
+            setRoad1_red();
+            setRoad2_blank();
             if(timer3_flag == 1){
                 SetTimer3_ms(1000);
                 counter1 = max_red1;
                 counter2 = max_green2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
+            }
+            if(is_button_long_press(MODE_BUTTON)){
+                SetTimer3_ms(20000);
+                traffic_status = MODE_CONFIG;
             }
             if(is_button_press(MODE_BUTTON)){   
                 SetTimer3_ms(20000);
+                SetTimer4_ms(500);
                 traffic_status = CONFIG_RED1_ENTER;
-                counter1 = max_red1;
             }
             if(is_button_press(INC_BUTTON)){   
                 SetTimer3_ms(20000);
+                counter1 = 0;
+                counter2 = max_red2;
                 traffic_status = CONFIG_RED2;
             }
             if(is_button_press(DEC_BUTTON)){   
                 SetTimer3_ms(20000);
+                counter1 = 0;
+                counter2 = max_green2;
                 traffic_status = CONFIG_GREEN2;
             }
+            clear_button_flags();
             break;
         case CONFIG_RED2:
+            setRoad1_blank();
+            setRoad2_red();
             if(timer3_flag == 1){
                 SetTimer3_ms(1000);
                 counter1 = max_red1;
                 counter2 = max_green2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
+            }
+            if(is_button_long_press(MODE_BUTTON)){
+                SetTimer3_ms(20000);
+                traffic_status = MODE_CONFIG;
             }            
             if(is_button_press(MODE_BUTTON)){
                 SetTimer3_ms(20000);
+                SetTimer4_ms(500);
                 traffic_status = CONFIG_RED2_ENTER;
-                counter2 = max_red2;
             }
             if(is_button_press(INC_BUTTON)){   
                 SetTimer3_ms(20000);
+                counter1 = max_green1;
+                counter2 = 0;
                 traffic_status = CONFIG_GREEN1;
             }            
             if(is_button_press(DEC_BUTTON)){   
                 SetTimer3_ms(20000);
+                counter1 = max_red1;
+                counter2 = 0;
                 traffic_status = CONFIG_RED1;
             }
+            clear_button_flags();
             break;
         case CONFIG_GREEN1:
+            setRoad1_green();
+            setRoad2_blank();            
             if(timer3_flag == 1){
                 SetTimer3_ms(1000);
                 counter1 = max_red1;
                 counter2 = max_green2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
             }
+            if(is_button_long_press(MODE_BUTTON)){
+                SetTimer3_ms(20000);
+                traffic_status = MODE_CONFIG;
+            }            
             if(is_button_press(MODE_BUTTON)){
                 SetTimer3_ms(20000);
+                SetTimer4_ms(500);
                 traffic_status = CONFIG_GREEN1_ENTER;
-                counter1 = max_green1;
             }
             if(is_button_press(INC_BUTTON)){   
                 SetTimer3_ms(20000);
+                counter1 = 0;
+                counter2 = max_green2;
                 traffic_status = CONFIG_GREEN2;
             }
             if(is_button_press(DEC_BUTTON)){   
                 SetTimer3_ms(20000);
+                counter1 = 0;
+                counter2 = max_red2;
                 traffic_status = CONFIG_RED2;
             }
+            clear_button_flags();
             break;
         case CONFIG_GREEN2:
+            setRoad1_blank();
+            setRoad2_green();            
             if(timer3_flag == 1){
                 SetTimer3_ms(1000);
                 counter1 = max_red1;
                 counter2 = max_green2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
             }
+            if(is_button_long_press(MODE_BUTTON)){
+                SetTimer3_ms(20000);
+                traffic_status = MODE_CONFIG;
+            }            
             if(is_button_press(MODE_BUTTON)){
                 SetTimer3_ms(20000);
+                SetTimer4_ms(500);
                 traffic_status = CONFIG_GREEN2_ENTER;
-                counter2 = max_green2;
             }            
             if(is_button_press(INC_BUTTON)){   
                 SetTimer3_ms(20000);
+                counter1 = max_red1;
+                counter2 = 0;
                 traffic_status = CONFIG_RED1;
             }
             if(is_button_press(DEC_BUTTON)){   
                 SetTimer3_ms(20000);
+                counter1 = max_green1;
+                counter2 = 0;
                 traffic_status = CONFIG_GREEN1;
             }
+            clear_button_flags();
             break;
         case CONFIG_RED1_ENTER:
+            if(timer4_flag){
+                toggleRoad1_red();
+                SetTimer4_ms(500);
+            }
             if(timer3_flag == 1){
                 SetTimer3_ms(1000);
                 counter1 = max_red1;
                 counter2 = max_green2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
             }
+            if(is_button_press(INC_BUTTON)){
+                counter1++;
+                if(counter1 > 99) counter1 = 10;
+            }
+            if(is_button_press(DEC_BUTTON)){
+                counter1--;
+                if(counter1 < 10) counter1 = 99;
+            }
+            if(is_button_long_press(MODE_BUTTON)){
+                max_red1 = counter1;
+                max_green2 = max_red1 - max_yellow2;
+                traffic_status = CONFIG_RED1;
+            }
+            clear_button_flags();
             break;
         case CONFIG_RED2_ENTER:
+            if(timer4_flag){
+                toggleRoad2_red();
+                SetTimer4_ms(500);
+            }            
             if(timer3_flag == 1){
                 SetTimer3_ms(1000);
                 counter1 = max_red1;
                 counter2 = max_green2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
             }
+            if(is_button_press(INC_BUTTON)){
+                counter2++;
+                if(counter2 > 99) counter2 = 10;
+            }
+            if(is_button_press(DEC_BUTTON)){
+                counter2--;
+                if(counter2 < 10) counter2 = 99;
+            }
+            if(is_button_long_press(MODE_BUTTON)){
+                max_red2 = counter2;
+                max_green1 = max_red2 - max_yellow1;
+                traffic_status = CONFIG_RED2;
+            }
+            clear_button_flags();            
             break;
         case CONFIG_GREEN1_ENTER:
+            if(timer4_flag){
+                toggleRoad1_green();
+                SetTimer4_ms(500);
+            }            
             if(timer3_flag == 1){
                 SetTimer3_ms(1000);
                 counter1 = max_red1;
                 counter2 = max_green2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
             }
+            if(is_button_press(INC_BUTTON)){
+                counter1++;
+                if(counter1 > 99) counter1 = 7;
+            }
+            if(is_button_press(DEC_BUTTON)){
+                counter1--;
+                if(counter1 < 7) counter1 = 99;
+            }
+            if(is_button_long_press(MODE_BUTTON)){
+                max_green1 = counter1;
+                max_red2 = max_green1 + max_yellow1;
+                traffic_status = CONFIG_GREEN1;
+            }
+            clear_button_flags();
             break;
         case CONFIG_GREEN2_ENTER:
+            if(timer4_flag){
+                toggleRoad2_green();
+                SetTimer4_ms(500);
+            }            
             if(timer3_flag == 1){
                 SetTimer3_ms(1000);
                 counter1 = max_red1;
                 counter2 = max_green2;
+                LcdPrintStringS(0,0,"   AUTO MODE    ");
                 traffic_status = AUTO_RED_GREEN;
             }
+            if(is_button_press(INC_BUTTON)){
+                counter2++;
+                if(counter1 > 99) counter1 = 7;
+            }
+            if(is_button_press(DEC_BUTTON)){
+                counter2--;
+                if(counter2 < 7) counter2 = 99;
+            }
+            if(is_button_long_press(MODE_BUTTON)){
+                max_green2 = counter2;
+                max_red1 = max_green2 + max_yellow2;
+                traffic_status = CONFIG_GREEN2;
+            }            
+            clear_button_flags();
             break;           
         default:
             break;

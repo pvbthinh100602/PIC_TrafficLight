@@ -1,9 +1,9 @@
 #include "timer.h"
 
 unsigned int timer0_value = 0,timer1_value = 0,timer2_value = 0,timer3_value = 0;
-unsigned char timer0_flag = 0, timer1_flag = 0,timer2_flag = 0, timer3_flag = 0;
+unsigned char timer0_flag = 0, timer1_flag = 0,timer2_flag = 0, timer3_flag = 0, timer4_flag = 0;
 unsigned int v_cnt0 = 0,v_cnt1 = 0;
-unsigned int timer0_cnt = 0,timer1_cnt = 0,timer2_cnt = 0,timer3_cnt = 0;
+unsigned int timer0_cnt = 0,timer1_cnt = 0,timer2_cnt = 0,timer3_cnt = 0, timer4_cnt = 0;
 //unsigned int time0_MUL = 1,time1_MUL = 1,time2_MUL = 1,time3_MUL = 1;
 
 //--------------------TIMER0-------------------------
@@ -168,7 +168,14 @@ void timer3_isr(void)
         if(timer3_cnt == 0){
             timer3_flag = 1;
         }
-    }              
+    }
+    
+    if(timer4_cnt > 0){
+        timer4_cnt--;
+        if(timer4_cnt == 0){
+            timer4_flag = 1;
+        }
+    } 
 }
 
 void SetTimer0_ms(int time)
@@ -187,4 +194,10 @@ void SetTimer3_ms(int time)
 {
 	timer3_cnt = time/10;
 	timer3_flag = 0;
+}
+
+void SetTimer4_ms(int time)
+{
+	timer4_cnt = time/10;
+	timer4_flag = 0;
 }

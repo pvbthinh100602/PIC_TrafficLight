@@ -26,12 +26,14 @@ void stop_timer3(void);
 void timer0_isr(void);
 void timer1_isr(void);
 void timer2_isr(void);
+void timer3_isr(void);
 // xay dung ham cap cao cho timer, nhung ham se duoc lop user goi
 void SetTimer0_ms(int time);
 void SetTimer1_ms(int time);
 void SetTimer3_ms(int time);
+void SetTimer4_ms(int time);
 
 
-extern unsigned char timer0_flag, timer1_flag, timer2_flag, timer3_flag;
+extern unsigned char timer0_flag, timer1_flag, timer2_flag, timer3_flag, timer4_flag;
 #endif	/* TIMER_H */
 

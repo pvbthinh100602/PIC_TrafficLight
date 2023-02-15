@@ -39,7 +39,7 @@
 #define MAN_GREEN_RED   23
 #define MAN_YELLOW_RED  24
 
-#define SLOW    31
+#define AUTO_SLOW    31
 
 #define CONFIG_RED1    41
 #define CONFIG_GREEN1  42
