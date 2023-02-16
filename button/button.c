@@ -30,6 +30,7 @@ void clear_button_flags(){
 unsigned char is_button_press(unsigned char index){
     if(key_flag[index] == 1){
         clear_button_flags();
+        buzzer_flag = 1;
         return 1;
     }
     return 0;
@@ -38,6 +39,7 @@ unsigned char is_button_press(unsigned char index){
 unsigned char is_button_long_press(unsigned char index){
     if(long_key_flag[index] == 1){
         clear_button_flags();
+        buzzer_flag = 1;
         return 1;
     }
     return 0;
@@ -57,7 +59,7 @@ void button_process(unsigned int index){
                 button_state[index] = LONG_PRESS_STATE;
                 key_flag[index] = 1;
                 long_key_flag[index] = 1;
-                button_counter[index] = 0;
+                button_counter[index] = 25;
             }
             break;
         case RELEASE_STATE:
@@ -72,7 +74,7 @@ void button_process(unsigned int index){
                 button_state[index] = RELEASE_STATE;
                 button_counter[index] = 0;
             }
-            if(button_counter[index] == 50){
+            if(button_counter[index] == 25){
                 key_flag[index] = 1;
                 button_counter[index] = 0;
             }

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=global/global.c display/display.c main.c interrupt/interrupt.c timer/timer.c button/button.c lcd/lcd.c fsm/fsm.c
+SOURCEFILES_QUOTED_IF_SPACED=global/global.c display/display.c main.c interrupt/interrupt.c timer/timer.c button/button.c lcd/lcd.c fsm/fsm.c pwm/pwm.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/global/global.o ${OBJECTDIR}/display/display.o ${OBJECTDIR}/main.o ${OBJECTDIR}/interrupt/interrupt.o ${OBJECTDIR}/timer/timer.o ${OBJECTDIR}/button/button.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/fsm/fsm.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/global/global.o.d ${OBJECTDIR}/display/display.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/interrupt/interrupt.o.d ${OBJECTDIR}/timer/timer.o.d ${OBJECTDIR}/button/button.o.d ${OBJECTDIR}/lcd/lcd.o.d ${OBJECTDIR}/fsm/fsm.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/global/global.o ${OBJECTDIR}/display/display.o ${OBJECTDIR}/main.o ${OBJECTDIR}/interrupt/interrupt.o ${OBJECTDIR}/timer/timer.o ${OBJECTDIR}/button/button.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/fsm/fsm.o ${OBJECTDIR}/pwm/pwm.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/global/global.o.d ${OBJECTDIR}/display/display.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/interrupt/interrupt.o.d ${OBJECTDIR}/timer/timer.o.d ${OBJECTDIR}/button/button.o.d ${OBJECTDIR}/lcd/lcd.o.d ${OBJECTDIR}/fsm/fsm.o.d ${OBJECTDIR}/pwm/pwm.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/global/global.o ${OBJECTDIR}/display/display.o ${OBJECTDIR}/main.o ${OBJECTDIR}/interrupt/interrupt.o ${OBJECTDIR}/timer/timer.o ${OBJECTDIR}/button/button.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/fsm/fsm.o
+OBJECTFILES=${OBJECTDIR}/global/global.o ${OBJECTDIR}/display/display.o ${OBJECTDIR}/main.o ${OBJECTDIR}/interrupt/interrupt.o ${OBJECTDIR}/timer/timer.o ${OBJECTDIR}/button/button.o ${OBJECTDIR}/lcd/lcd.o ${OBJECTDIR}/fsm/fsm.o ${OBJECTDIR}/pwm/pwm.o
 
 # Source Files
-SOURCEFILES=global/global.c display/display.c main.c interrupt/interrupt.c timer/timer.c button/button.c lcd/lcd.c fsm/fsm.c
+SOURCEFILES=global/global.c display/display.c main.c interrupt/interrupt.c timer/timer.c button/button.c lcd/lcd.c fsm/fsm.c pwm/pwm.c
 
 
 CFLAGS=
@@ -165,6 +165,14 @@ ${OBJECTDIR}/fsm/fsm.o: fsm/fsm.c  nbproject/Makefile-${CND_CONF}.mk
 	@${DEP_GEN} -d ${OBJECTDIR}/fsm/fsm.o 
 	@${FIXDEPS} "${OBJECTDIR}/fsm/fsm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/pwm/pwm.o: pwm/pwm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/pwm" 
+	@${RM} ${OBJECTDIR}/pwm/pwm.o.d 
+	@${RM} ${OBJECTDIR}/pwm/pwm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_PICKIT2=1 -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/pwm/pwm.o   pwm/pwm.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/pwm/pwm.o 
+	@${FIXDEPS} "${OBJECTDIR}/pwm/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/global/global.o: global/global.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/global" 
@@ -229,6 +237,14 @@ ${OBJECTDIR}/fsm/fsm.o: fsm/fsm.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/fsm/fsm.o   fsm/fsm.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/fsm/fsm.o 
 	@${FIXDEPS} "${OBJECTDIR}/fsm/fsm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/pwm/pwm.o: pwm/pwm.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/pwm" 
+	@${RM} ${OBJECTDIR}/pwm/pwm.o.d 
+	@${RM} ${OBJECTDIR}/pwm/pwm.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/pwm/pwm.o   pwm/pwm.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/pwm/pwm.o 
+	@${FIXDEPS} "${OBJECTDIR}/pwm/pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

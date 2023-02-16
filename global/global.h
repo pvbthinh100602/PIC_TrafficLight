@@ -15,6 +15,7 @@
 #include "interrupt/interrupt.h"
 #include "button/button.h"
 #include "lcd/lcd.h"
+#include "pwm/pwm.h"
 
 #define INIT 0
 
@@ -28,12 +29,6 @@
 #define AUTO_GREEN_RED      13
 #define AUTO_YELLOW_RED     14
 
-#define AUTO_RED_GREEN_SETUP      111
-#define AUTO_RED_YELLOW_SETUP     121
-#define AUTO_GREEN_RED_SETUP      131
-#define AUTO_YELLOW_RED_SETUP     141
-
-#define MAN_SETUP       20
 #define MAN_RED_GREEN   21
 #define MAN_RED_YELLOW  22
 #define MAN_GREEN_RED   23
@@ -45,14 +40,14 @@
 #define CONFIG_GREEN1  42
 #define CONFIG_RED2    43
 #define CONFIG_GREEN2  44
-#define CONFIG_TURN_AUTO  51
+#define CONFIG_TURN_AUTO  60
 
 
 #define CONFIG_RED1_ENTER    45
 #define CONFIG_GREEN1_ENTER  46
 #define CONFIG_RED2_ENTER    47
 #define CONFIG_GREEN2_ENTER  48
-#define CONFIG_TURN_AUTO_ENTER  52
+#define CONFIG_TURN_AUTO_ENTER  61
 
 #define MODE_BUTTON 11
 #define INC_BUTTON  3
@@ -62,6 +57,7 @@ extern unsigned char traffic_status;
 
 extern unsigned char counter1;
 extern unsigned char counter2;
+extern unsigned char return_auto_time;
 
 extern unsigned char max_red1;
 extern unsigned char max_red2;

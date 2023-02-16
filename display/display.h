@@ -12,6 +12,8 @@
 
 #define LED PORTB
 
+extern unsigned char buzzer_flag;
+
 void led_init();
 void turnLedOn(unsigned char index);
 void turnLedOff(unsigned char index);

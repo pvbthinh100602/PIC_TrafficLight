@@ -12,6 +12,7 @@
       <itemPath>button/button.h</itemPath>
       <itemPath>lcd/lcd.h</itemPath>
       <itemPath>fsm/fsm.h</itemPath>
+      <itemPath>pwm/pwm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -28,6 +29,7 @@
       <itemPath>button/button.c</itemPath>
       <itemPath>lcd/lcd.c</itemPath>
       <itemPath>fsm/fsm.c</itemPath>
+      <itemPath>pwm/pwm.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

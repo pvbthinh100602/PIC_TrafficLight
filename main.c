@@ -1,6 +1,7 @@
 #include "main.h"
 #include "lcd/lcd.h"
 #include "fsm/fsm.h"
+#include "pwm/pwm.h"
 
 void delay_ms(int value);
 void init_system();
@@ -13,7 +14,7 @@ void main(){
         fsm_auto();
         fsm_man();
         fsm_config();
-        displayCounter();
+        buzz();
         DisplayLcdScreen();
     }
 }
@@ -21,9 +22,9 @@ void main(){
 void init_system(){
     TRISB = 0x00;
     init_lcd();
-//    led_init();
     init_interrupt();
-    init_key_matrix();    
+    init_key_matrix();
+    init_pwm();
     init_timer0(4695);  //dinh thoi 1ms 
     init_timer1(9390);  //dinh thoi 2ms
 	init_timer3(46950); //dinh thoi 10ms
